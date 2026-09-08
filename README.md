@@ -1,5 +1,12 @@
 # Multiscale Distribution Entropy Analysis of Short Epileptic EEG Signals
 
+## Status
+
+| Item | Status |
+|---|---|
+| Research | Published · Mathematical Biosciences and Engineering 2024 |
+| Implementation | Method and results available; analysis code: **To be uploaded** |
+
 Dae Hyeon Kim, Jin-Oh Park, Dae-Young Lee, and Young-Seok Choi  
 *Mathematical Biosciences and Engineering* 21(4), 5556–5576, 2024. [Paper](https://doi.org/10.3934/mbe.2024245)
 
@@ -11,7 +18,7 @@ Multiscale entropy analysis of short EEG segments using coarse-graining (MDE-CG)
 
 ![Moving-average construction at two scales](figures/moving-average.png)
 
-*Paper Figure 2. Moving-average construction retains overlapping samples at each scale.*
+*Moving-average construction retains overlapping samples at each scale.*
 
 | Method | Scale construction | Entropy estimator |
 |---|---|---|
@@ -32,20 +39,10 @@ At scale s, coarse-graining produces floor(N/s) samples; moving averaging produc
 
 ![ROC AUC across scales for three intervals and three class pairs](figures/auc-bonn.png)
 
-*Paper Figure 7. Rows correspond to intervals A, B, and C; columns compare normal/interictal, normal/ictal, and interictal/ictal EEG. Curves retain the original scale-dependent values.*
+*Rows correspond to intervals A, B, and C; columns compare normal/interictal, normal/ictal, and interictal/ictal EEG.*
 
 ### Bern–Barcelona: focal versus non-focal
 
 ![ROC AUC for focal and non-focal EEG](figures/auc-bern.png)
 
-*Paper Figure 8. MDE-MA maintains higher AUC than the compared estimators over most scales above one. The result depends on scale; it is not a single classification-accuracy score.*
-
-## Release status
-
-| Material | Status |
-|---|---|
-| Method and experimental figures | Available above |
-| Original analysis code and environment | **To be uploaded** |
-| Reproduction instructions | **To be uploaded** |
-
-This repository is a paper summary. It does not yet contain the original analysis implementation.
+*MDE-MA maintains higher AUC than the compared estimators over most scales above one. AUC is evaluated separately at each scale.*
